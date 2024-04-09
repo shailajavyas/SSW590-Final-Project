@@ -3,48 +3,54 @@
 <head>
     <title>Travel Recommendation Quiz</title>
     <script src="quiz.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="quiz.css" />
 
 </head>
 <body>
+    <h1>Travel Genie</h1>
+    <h2>Welcome to Travel Genie!  Our magical quiz can predict where you should travel to on your next vacation!</h2>
+    <h2>After filling out our quiz, you will not only know where to go, but what to do there as well!</h2>
+    <p>Ready to find your dream vacation?  Take the quiz below!</p>
     <form id="quizForm">
-        <h2>What is your favorite season?</h2>
+        <h3>What is your favorite season?</h3>
         <input type="radio" name="season" value="3"> Spring<br>
         <input type="radio" name="season" value="2"> Summer<br>
         <input type="radio" name="season" value="1"> Fall<br>
         <input type="radio" name="season" value="0"> Winter<br>
 
-        <h2>How do you like to travel?</h2>
+        <h3>How do you like to travel?</h3>
         <input type="radio" name="transport" value="3"> Car<br>
         <input type="radio" name="transport" value="2"> Plane<br>
         <input type="radio" name="transport" value="1"> Train<br>
         <input type="radio" name="transport" value="0"> It depends!<br>
 
-        <h2>Where would you like to stay?</h2>
+        <h3>Where would you like to stay?</h3>
         <input type="radio" name="stay" value="3"> Hotel<br>
         <input type="radio" name="stay" value="2"> Airbnb or vacation rental<br>
         <input type="radio" name="stay" value="1"> Youth hostel<br>
         <input type="radio" name="stay" value="0"> In a tent (camping) <br>
 
-        <h2>What is your favorite activity?</h2>
+        <h3>What is your favorite activity?</h3>
         <input type="radio" name="activity" value="3"> Visiting museums<br>
         <input type="radio" name="activity" value="2"> Walking through natural scenery<br>
         <input type="radio" name="activity" value="1"> Exploring tourist sites<br>
         <input type="radio" name="activity" value="0"> Shopping<br>
 
-        <h2>If you had to pick one meal to have on vacation, what would it be ?</h2>
+        <h3>If you had to pick one meal to have on vacation, what would it be ?</h3>
         <input type="radio" name="food" value="3"> Pizza<br>
         <input type="radio" name="food" value="2"> Sushi<br>
         <input type="radio" name="food" value="1"> Kebabs<br>
         <input type="radio" name="food" value="0"> Tacos<br>
 
-        <h2>Choose someone to travel with:</h2>
+        <h3>Choose someone to travel with:</h3>
         <input type="radio" name="buddy" value="3"> Friends<br>
         <input type="radio" name="buddy" value="2"> Significant other<br>
         <input type="radio" name="buddy" value="1"> Alone<br>
         <input type="radio" name="buddy" value="0"> Family<br>
 
 
-
+        <br>
+        <br>
         <button type="button" id="submit">Submit</button>
     </form>
 

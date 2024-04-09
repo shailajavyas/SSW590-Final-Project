@@ -1,0 +1,31 @@
+body {
+    background-color: #B298DC;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    text-align: center;
+    color: #B9FAF8;
+    background-color: #6F2DBD;
+    text-transform: lowercase;
+    font-size: 45px;
+    letter-spacing: 10px;
+}
+form {
+    background-color: #B8D0EB;
+    width: fit-content;
+    display: table;
+    margin: auto;
+    padding: 20px;
+    border-radius: 20px;
+}
+button {
+    display: table;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background-color: #A663CC;
+    padding: 10px;
+}
+p {
+    text-align: center;
+}

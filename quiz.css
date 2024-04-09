@@ -29,3 +29,17 @@ button {
 p {
     text-align: center;
 }
+h2 {
+    text-align: center;
+}
+.intro {
+    text-align: left;
+}
+#result {
+    color: white;
+    background-color: #6F2DBD;
+    padding: 10px;
+    width: fit-content;
+    margin: auto;
+    border-radius: 10px;
+}

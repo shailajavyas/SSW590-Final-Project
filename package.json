@@ -4,7 +4,7 @@
   "description": "",
   "main": "quiz.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/shailajavyas/SSW590-Final-Project/issues"
   },
-  "homepage": "https://github.com/shailajavyas/SSW590-Final-Project#readme"
+  "homepage": "https://github.com/shailajavyas/SSW590-Final-Project#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "jest": "^29.7.0"
+  }
 }

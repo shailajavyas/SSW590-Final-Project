@@ -5,15 +5,16 @@
   "main": "app.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shailajavyas/SSW590-Final-Project.git"
   },
   "author": "Mariam Dardir and Shailaja Vyas",
   "license": "ISC",
-  "dependencies": {
-    "axios": "^1.6.8",
-    "express": "^4.19.2",
-    "express-handlebars": "^7.0.4",
-    "handlebars": "^4.7.7"
-  }
+  "bugs": {
+    "url": "https://github.com/shailajavyas/SSW590-Final-Project/issues"
+  },
+  "homepage": "https://github.com/shailajavyas/SSW590-Final-Project#readme"
 }

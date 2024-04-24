@@ -1,0 +1,8 @@
+    <h1>Locations Found</h1>
+    <h2>{{{searchTerm}}}</h2>
+    <ol>
+        {{#each locations}}
+        <li><a href ="/venuedetails/{{{this.id}}}">{{{this.name}}} ({{{this.tags}}})</a></li>
+        {{/each}}
+    </ol>
+    <a href = "/">Take the quiz again!</a>

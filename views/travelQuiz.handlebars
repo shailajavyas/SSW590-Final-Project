@@ -1,0 +1,115 @@
+{{!
+
+This page will respond with a valid HTML document. The title of the document should be "Venue Finder". You should have
+the title set as the <title> element of the HTML document and as an h1 in your document.
+
+    Your page should reference a CSS file, /public/css/main-styles.css; this file should have at least 5 rulesets that
+    apply
+    to this page; these 5 rules can also apply to elements across all of your pages, or be unique to this page.
+
+    You should have a main element, and inside of the main element have a p element with a brief (2-3 sentence
+    description) of what your website does.
+
+    Also inside the main element, you will have a form; this form will POST to the /searchvenues route. This form will
+    have an input and a label; the label should properly reference the same id as the input using the for attribute. You
+    should also have an input with a type of submit that submits the form. The input in your form should have a name of
+    searchVenueTerm.
+
+    }}
+
+    <h1>Travel Genie</h1>
+    <h2 class="intro">Welcome to Travel Genie!  Our magical quiz can predict where you should travel to on your next vacation!</h2>
+    <h2 class="intro">After filling out our quiz, you will not only know where to go, but what to do there as well!</h2>
+    <p>Ready to find your dream vacation?  Take the quiz below!</p>
+    <form action="/searchLocation" method="POST" id="quizForm">
+        <h3>What is your favorite season?</h3>
+        <input type="radio" name="season" value="3"> Spring<br>
+        <input type="radio" name="season" value="2"> Summer<br>
+        <input type="radio" name="season" value="1"> Fall<br>
+        <input type="radio" name="season" value="0"> Winter<br>
+
+        <h3>How do you like to travel?</h3>
+        <input type="radio" name="transport" value="3"> Car<br>
+        <input type="radio" name="transport" value="2"> Plane<br>
+        <input type="radio" name="transport" value="1"> Train<br>
+        <input type="radio" name="transport" value="0"> It depends!<br>
+
+        <h3>Where would you like to stay?</h3>
+        <input type="radio" name="stay" value="3"> Hotel<br>
+        <input type="radio" name="stay" value="2"> Airbnb or vacation rental<br>
+        <input type="radio" name="stay" value="1"> Youth hostel<br>
+        <input type="radio" name="stay" value="0"> In a tent (camping) <br>
+
+        <h3>What is your favorite activity?</h3>
+        <input type="radio" name="activity" value="3"> Visiting museums<br>
+        <input type="radio" name="activity" value="2"> Walking through natural scenery<br>
+        <input type="radio" name="activity" value="1"> Exploring tourist sites<br>
+        <input type="radio" name="activity" value="0"> Shopping<br>
+
+        <h3>If you had to pick one meal to have on vacation, what would it be ?</h3>
+        <input type="radio" name="food" value="3"> Pizza<br>
+        <input type="radio" name="food" value="2"> Sushi<br>
+        <input type="radio" name="food" value="1"> Kebabs<br>
+        <input type="radio" name="food" value="0"> Tacos<br>
+
+        <h3>Choose someone to travel with:</h3>
+        <input type="radio" name="buddy" value="3"> Friends<br>
+        <input type="radio" name="buddy" value="2"> Significant other<br>
+        <input type="radio" name="buddy" value="1"> Alone<br>
+        <input type="radio" name="buddy" value="0"> Family<br>
+
+        <input type="hidden" name="origin" id="origin" value="">
+        <input type="hidden" name="longitude" id="longitude" value="">
+        <input type="hidden" name="latitude" id="latitude" value="">
+        <br>
+        <br>
+        <button type="submit" id="submit">Submit</button>
+    </form>
+    <div id="result"></div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('submit').addEventListener('click', recommendCity);
+  });
+  
+  function recommendCity() {
+    const totalPoints = getPoints();
+  
+    let recommendation = "";
+  
+    if (totalPoints >= 12) {
+      recommendation = pickCity(["Barcelona, Spain", "Paris, France", "New York City, USA"]);
+    } else if (totalPoints >= 8) {
+      recommendation = pickCity(["San Francisco, USA", "London, UK", "Berlin, Germany"]);
+    } else if (totalPoints >= 4) {
+      recommendation = pickCity(["Bangalore, India", "Dallas, USA"]);
+    } else {
+      recommendation = "A vacation may not be in the cards for you :(";
+    }
+  
+    document.getElementById("result").innerHTML = "<h2>Recommended Destination:</h2><p>" + recommendation + "</p>";
+  }
+  
+  function getPoints() {
+    const questions = ["season", "transport", "stay", "activity", "food", "buddy"];
+    let totalPoints = 0;
+  
+    questions.forEach(question => {
+      const selectedOption = document.querySelector('input[name="' + question + '"]:checked');
+      if (selectedOption) {
+        totalPoints = totalPoints + parseInt(selectedOption.value);
+      }
+    });
+  
+    return totalPoints;
+  }
+  
+  function pickCity(cities) {
+    const randomCity = Math.floor(Math.random() * cities.length);
+    const selectVenueTerm = cities[randomCity];
+     document.getElementById('latitude').value = "2.160873";
+     document.getElementById('longitude').value = "41.397158";
+    document.getElementById('origin').value = selectVenueTerm;
+    return selectVenueTerm;
+  }
+  
+</script>

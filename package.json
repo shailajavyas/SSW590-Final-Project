@@ -1,19 +1,19 @@
 {
-  "name": "ssw590-final-project",
+  "name": "travelgenie",
   "version": "1.0.0",
   "description": "",
-  "main": "quiz.js",
+  "main": "app.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shailajavyas/SSW590-Final-Project.git"
-  },
-  "author": "",
+  "author": "Mariam Dardir and Shailaja Vyas",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/shailajavyas/SSW590-Final-Project/issues"
-  },
-  "homepage": "https://github.com/shailajavyas/SSW590-Final-Project#readme"
+  "dependencies": {
+    "axios": "^1.6.8",
+    "express": "^4.19.2",
+    "express-handlebars": "^7.0.4",
+    "handlebars": "^4.7.7"
+  }
 }

@@ -20,24 +20,31 @@
 //     document.getElementById("result").innerHTML = "<h2>Recommended Destination:</h2><p>" + recommendation + "</p>";
 //   }
   
-//   function getPoints() {
-//     const questions = ["season", "transport", "stay", "activity", "food", "buddy"];
-//     let totalPoints = 0;
+function getPoints() {
+    const questions = ["season", "transport", "stay", "activity", "food", "buddy"];
+    let totalPoints = 0;
   
-//     questions.forEach(question => {
-//       const selectedOption = document.querySelector('input[name="' + question + '"]:checked');
-//       if (selectedOption) {
-//         totalPoints = totalPoints + parseInt(selectedOption.value);
-//       }
-//     });
+    questions.forEach(question => {
+      const selectedOption = document.querySelector('input[name="' + question + '"]:checked');
+      if (selectedOption) {
+        totalPoints = totalPoints + parseInt(selectedOption.value);
+      }
+    });
   
-//     return totalPoints;
-//   }
+    return totalPoints;
+}
   
-//   function pickCity(cities) {
-//     const randomCity = Math.floor(Math.random() * cities.length);
-//     const selectVenueTerm = cities[randomCity];
-//     document.getElementById('origin').value = selectVenueTerm;
-//     return selectVenueTerm;
-//   }
-  
+function pickCity(cities) {
+    const randomCity = Math.floor(Math.random() * cities.length);
+    const selectVenueTerm = cities[randomCity];
+    // document.getElementById('origin').value = selectVenueTerm;
+    return selectVenueTerm;
+}
+
+function usersName(name) {
+    return name +"'s Recomendations";
+}
+
+module.exports.points = getPoints;
+module.exports.title = usersName;
+module.exports.city = pickCity;

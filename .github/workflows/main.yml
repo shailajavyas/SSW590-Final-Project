@@ -19,7 +19,7 @@ jobs:
           node-version: 18.13.0
           cache: 'npm'
           cache-dependency-path: ./package.json
-      - name: Start MongoDB
-        uses: supercharge/mongodb-github-action@1.10.0
+      # - name: Start MongoDB
+      #   uses: supercharge/mongodb-github-action@1.10.0
       - run: npm i
       - run: npm run test

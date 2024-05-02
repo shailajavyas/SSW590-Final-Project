@@ -106,9 +106,39 @@ the title set as the <title> element of the HTML document and as an h1 in your d
   function pickCity(cities) {
     const randomCity = Math.floor(Math.random() * cities.length);
     const selectVenueTerm = cities[randomCity];
-     document.getElementById('latitude').value = "2.160873";
-     document.getElementById('longitude').value = "41.397158";
-    document.getElementById('origin').value = selectVenueTerm;
+    if(selectVenueTerm == "Barcelona"){
+      document.getElementById('latitude').value = "2.160873";
+      document.getElementById('longitude').value = "41.397158";
+      document.getElementById('origin').value = selectVenueTerm;
+    }else if(selectVenueTerm == "Bangalore"){
+      document.getElementById('latitude').value = "12.923210";
+      document.getElementById('longitude').value = "77.642256";
+      document.getElementById('origin').value = selectVenueTerm;
+    }else if(selectVenueTerm == "Berlin"){
+      document.getElementById('latitude').value = "52.490569";
+      document.getElementById('longitude').value = "13.457198";
+      document.getElementById('origin').value = selectVenueTerm;
+    }else if(selectVenueTerm == "Dallas"){
+      document.getElementById('latitude').value = "32.740310";
+      document.getElementById('longitude').value = "-96.737293";
+      document.getElementById('origin').value = selectVenueTerm;
+    }else if(selectVenueTerm == "London"){
+      document.getElementById('latitude').value = "51.484703";
+      document.getElementById('longitude').value = "-0.061048";
+      document.getElementById('origin').value = selectVenueTerm;
+    }else if(selectVenueTerm == "New York"){
+      document.getElementById('latitude').value = "40.697607";
+      document.getElementById('longitude').value = "-73.942847";
+      document.getElementById('origin').value = selectVenueTerm;
+    }else if(selectVenueTerm == "Paris"){
+      document.getElementById('latitude').value = "48.80";
+      document.getElementById('longitude').value = "2.46";
+      document.getElementById('origin').value = selectVenueTerm;
+    }else{
+      document.getElementById('latitude').value = "37.732007";
+      document.getElementById('longitude').value = "-122.370076";
+      document.getElementById('origin').value = selectVenueTerm;
+    }
     return selectVenueTerm;
   }
   
